@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myfirst-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLables: 
+     app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+
+    spec:
+      containers:
+      - name: myfirst-container
+        image:
